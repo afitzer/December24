@@ -116,4 +116,4 @@ Special thanks to:
 
 ---
 
-For any queries, please contact [yourname@yourcompany.com](mailto:yourname@yourcompany.com).
+For any queries, please contact [alex.fitzgerald35@gmail.com](mailto:alex.fitzgerald35@gmail.com).
