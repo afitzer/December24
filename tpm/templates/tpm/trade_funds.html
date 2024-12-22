@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load custom_filters %}
+
+{% block title %}Trade Funds{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Trade Funds</h1>
+    <p class="lead">Manage and monitor your trade funds.</p>
+    <a class="btn btn-primary btn-lg" href="{% url 'create_trade_fund' %}" role="button">Create New Trade Fund</a>
+</div>
+
+<h2>Funds List</h2>
+<div class="row">
+    {% for fund in trade_funds %}
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">{{ fund.name }}</h5>
+                <p class="card-text">Budget: {{ fund.budget|currency }}</p>
+                <p class="card-text">Remaining Budget: {{ fund.remaining_budget|currency }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

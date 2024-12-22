@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Trade Promotions{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Trade Promotions</h1>
+    <p class="lead">View and manage trade promotions.</p>
+</div>
+
+<form method="get" class="mb-4">
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Filter</button>
+</form>
+
+<h2>Promotions List</h2>
+<div class="row">
+    {% for promotion in promotions %}
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">{{ promotion.promotion_name }}</h5>
+                <p class="card-text">{{ promotion.description }}</p>
+                <p class="card-text"><strong>Start Date:</strong> {{ promotion.start_date }}</p>
+                <p class="card-text"><strong>End Date:</strong> {{ promotion.end_date }}</p>
+                <p class="card-text"><strong>Customer Account Plan:</strong> {{
+                    promotion.customer_account_plan.customer_name }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

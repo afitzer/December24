@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load custom_filters %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Trade Promotion Management System</h1>
+    <p class="lead">Manage trade funds, customer account plans, and trade promotions efficiently.</p>
+    <hr class="my-4">
+    <p>Get started by exploring the sections below.</p>
+    <a class="btn btn-primary btn-lg" href="{% url 'trade_funds' %}" role="button">Trade Funds</a>
+    <a class="btn btn-secondary btn-lg" href="{% url 'customer_account_plans' %}" role="button">Customer Account
+        Plans</a>
+    <a class="btn btn-success btn-lg" href="{% url 'trade_promotions' %}" role="button">Trade Promotions</a>
+</div>
+{% endblock %}
